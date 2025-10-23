@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Small Fiber Neuropathy Wiki - r/smallfiberneuropathy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 200px);
+        }
+
+        .sidebar {
+            width: 280px;
+            background: white;
+            padding: 2rem 1rem;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        .sidebar h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .nav-menu {
+            list-style: none;
+        }
+
+        .nav-menu li {
+            margin-bottom: 0.5rem;
+        }
+
+        .nav-menu a {
+            color: #555;
+            text-decoration: none;
+            display: block;
+            padding: 0.5rem;
+            border-radius: 5px;
+            transition: all 0.2s;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            background: #f0f0f0;
+            color: #667eea;
+            padding-left: 1rem;
+        }
+
+        .content {
+            flex: 1;
+            background: white;
+            padding: 3rem;
+            margin: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .content h2 {
+            color: #667eea;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+
+        .content h2:first-child {
+            margin-top: 0;
+        }
+
+        .content h3 {
+            color: #764ba2;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+            font-size: 1.5rem;
+        }
+
+        .content h4 {
+            color: #555;
+            margin-top: 1.2rem;
+            margin-bottom: 0.6rem;
+            font-size: 1.2rem;
+        }
+
+        .content ul, .content ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .content p {
+            margin-bottom: 1rem;
+        }
+
+        .alert-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 5px;
+        }
+
+        .info-box {
+            background: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 5px;
+        }
+
+        .warning-box {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 5px;
+        }
+
+        .video-container {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .video-container a {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .page-section {
+            display: none;
+        }
+
+        .page-section.active {
+            display: block;
+        }
+
+        strong {
+            color: #333;
+            font-weight: 600;
+        }
+
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .content {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+
+            .header h1 {
+                font-size: 1.8rem;
+            }
+        }
+
+        .toc-list {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .toc-list h3 {
+            margin-top: 0;
+        }
+
+        blockquote {
+            border-left: 4px solid #667eea;
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            color: #555;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Small Fiber Neuropathy Wiki</h1>
+        <p>A Comprehensive Community Guide from r/smallfiberneuropathy</p>
+    </div>
+
+    <div class="container">
+        <nav class="sidebar">
+            <h3>Navigation</h3>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#what-is-sfn" class="nav-link">What is SFN?</a></li>
+                <li><a href="#symptoms" class="nav-link">Symptoms</a></li>
+                <li><a href="#overlapping" class="nav-link">Overlapping Conditions</a></li>
+                <li><a href="#diagnosis" class="nav-link">Getting Diagnosed</a></li>
+                <li><a href="#causes" class="nav-link">Causes & Risk Factors</a></li>
+                <li><a href="#treatment" class="nav-link">Treatment</a></li>
+                <li><a href="#lifestyle" class="nav-link">Lifestyle Management (Diet & Exercise)</a></li>
+<li><a href="#living" class="nav-link">Living with SFN (Disability & Mental Health)</a></li>
+                <li><a href="#resources" class="nav-link">Resources</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <!-- HOME PAGE -->
+            <section id="home" class="page-section active">
+                <h2>Welcome to r/smallfiberneuropathy!</h2>
+                
+                <div class="info-box">
+                    <strong>You Are Not Alone!!!</strong>
+                </div>
+
+                <p>If you're newly diagnosed with Small Fiber Neuropathy (SFN), still searching for answers about mysterious pain and autonomic symptoms, or supporting someone with this condition - this guide is for you. We've compiled information from medical research, patient experiences, and the collective wisdom of this community to help you understand SFN and make informed decisions.</p>
+
+                <p><strong>This is an ongoing community project - if you have any suggestions, please give them!!!</strong></p>
+
+                <div class="video-container">
+                    <p>If you're not feeling up to reading through a lot of information right now, this presentation on YouTube by Dr. Anne Oaklander is very helpful and a great introduction:</p>
+                    <p><strong>Small Fibers, Big Pain</strong></p>
+                    <p><a href="https://youtu.be/s66LvWQ5Qso?si=KeqYMumLVw_RmIrD" target="_blank">Watch on YouTube →</a></p>
+                </div>
+
+                <div class="toc-list">
+                    <h3>Table of Contents</h3>
+                    <ol>
+                        <li><strong>What is Small Fiber Neuropathy?</strong></li>
+                        <li><strong>Symptoms</strong></li>
+                        <li><strong>Overlapping Conditions</strong></li>
+                        <li><strong>Getting Diagnosed</strong></li>
+                        <li><strong>Causes and Risk Factors</strong></li>
+                        <li><strong>Treatment</strong></li>
+                        <li><strong>Lifestyle Management</strong></li>
+                        <li><strong>Living with SFN</strong></li>
+                        <li><strong>Resources</strong></li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- WHAT IS SFN PAGE -->
+            <section id="what-is-sfn" class="page-section">
+                <h2>What is Small Fiber Neuropathy?</h2>
+
+                <p>Small Fiber Neuropathy (SFN) is a disorder affecting the small nerve fibers in your peripheral nervous system. These tiny nerve fibers have two critical jobs:</p>
+
+                <ol>
+                    <li><strong>Sensory function:</strong> Transmitting pain and temperature sensations</li>
+                    <li><strong>Autonomic function:</strong> Controlling involuntary body processes like heart rate, blood pressure, sweating, digestion, and bladder control</li>
+                </ol>
+
+                <p>When the small fibers become damaged, nerve signaling involved with many different bodily systems can get messed up and this causes a wide variety of symptoms -- with pain being the most common.</p>
+
+                <p>SFN can vary in severity from being a mild nuisance to extremely debilitating and <strong>legitimately disabling</strong>. It can <strong>profoundly</strong> affect one's quality of life.</p>
+
+                <div class="alert-box">
+                    <strong>Small Fiber Neuropathy is relatively uncommon</strong> as far as official diagnoses go, <strong>but is highly likely underdiagnosed</strong> due to a current lack of awareness by medical professionals. Because of this, <strong>it is highly recommended to educate yourself as deeply as possible about it.</strong>
+                </div>
+            </section>
+
+            <!-- SYMPTOMS PAGE -->
+            <section id="symptoms" class="page-section">
+                <h2>Symptoms</h2>
+
+                <p>The symptoms mainly show up in two categories: different types of pain, and different types of autonomic dysfunction (dysautonomia).</p>
+
+                <h3>Pain Descriptions (What People Actually Say)</h3>
+
+                <h4>Burning pain (most characteristic):</h4>
+                <ul>
+                    <li>"My feet are on fire"</li>
+                    <li>"Like walking on hot coals"</li>
+                    <li>"Constant sunburn sensation"</li>
+                </ul>
+
+                <h4>Electric/shooting pain:</h4>
+                <ul>
+                    <li>"Lightning bolts through my feet"</li>
+                    <li>"Electric shocks out of nowhere"</li>
+                    <li>"Zapping sensations"</li>
+                </ul>
+
+                <h4>Stabbing pain:</h4>
+                <ul>
+                    <li>"Walking on broken glass"</li>
+                    <li>"Knives stabbing my feet"</li>
+                    <li>"Sharp, stabbing attacks"</li>
+                </ul>
+
+                <h4>Tingling and paresthesias:</h4>
+                <ul>
+                    <li>"Constant pins and needles"</li>
+                    <li>"Fizzing or buzzing sensation"</li>
+                    <li>"Vibrating feeling"</li>
+                    <li>"Crawling sensations"</li>
+                </ul>
+
+                <h4>Diffuse Pain (pain everywhere):</h4>
+                <ul>
+                    <li>"Deep aching in all my limbs"</li>
+                    <li>"Back, neck, arms, legs..."</li>
+                    <li>"Constantly increasing and decreasing"</li>
+                </ul>
+
+                <h4>Cold sensations:</h4>
+                <ul>
+                    <li>"Ice-cold feet that hurt"</li>
+                    <li>"Painful coldness"</li>
+                    <li>"Freezing from the inside out"</li>
+                </ul>
+
+                <h3>Other Sensory Symptoms</h3>
+
+                <h4>Allodynia (pain from normally non-painful stimuli):</h4>
+                <ul>
+                    <li>Bedsheets feel like sandpaper</li>
+                    <li>Light touch is painful</li>
+                    <li>Clothing tags or seams hurt</li>
+                    <li>Shower water feels like needles</li>
+                </ul>
+
+                <h4>Hyperalgesia (increased pain sensitivity):</h4>
+                <ul>
+                    <li>Minor injuries feel severe</li>
+                    <li>Normal pain is amplified</li>
+                </ul>
+
+                <h4>Numbness:</h4>
+                <ul>
+                    <li>Patchy areas of decreased sensation</li>
+                    <li>May not feel pinprick in spots</li>
+                    <li>Difficulty distinguishing hot from cold</li>
+                </ul>
+
+                <h4>Other sensations:</h4>
+                <ul>
+                    <li>Itching that won't respond to treatment</li>
+                    <li>Feeling of pebbles or wrinkled socks in shoes (nothing there)</li>
+                    <li>Cramping or aching</li>
+                    <li>Restless legs</li>
+                    <li>Tightness or squeezing sensations</li>
+                </ul>
+
+                <h4>Temporal patterns:</h4>
+                <ul>
+                    <li>Pain often <strong>worsens at night</strong> or during rest</li>
+                    <li>May improve with walking (initially)</li>
+                    <li>Exacerbated by temperature changes</li>
+                    <li>Can be triggered by stress</li>
+                </ul>
+
+                <h3>Autonomic Symptoms (Dysautonomia)</h3>
+
+                <p>Damage to small autonomic fibers causes widespread systemic dysfunction of multiple bodily systems, very often at the same time:</p>
+
+                <h4>Orthostatic hypotension:</h4>
+                <ul>
+                    <li>Dizziness or lightheadedness upon standing</li>
+                    <li>Feeling faint when getting up</li>
+                    <li>Blurred vision with position changes</li>
+                    <li>May progress to syncope (fainting)</li>
+                </ul>
+
+                <h4>Heart rate abnormalities:</h4>
+                <ul>
+                    <li>Tachycardia (fast heart rate, generally defined as a resting heart rate of over 100 beats per minute (bpm) in adults)</li>
+                    <li>Palpitations (a sensation of an abnormally fast, pounding, or irregular heartbeat. It can feel like the heart is skipping beats, racing, or fluttering in the chest.)</li>
+                    <li>Bradycardia in some cases</li>
+                </ul>
+
+                <h4>Sudomotor (Sweating) Dysfunction</h4>
+                <ul>
+                    <li><strong>Hyperhidrosis</strong> - excessive sweating</li>
+                    <li><strong>Hypohidrosis</strong> - decreased or absent sweating</li>
+                    <li><strong>Patchy sweating</strong> - some areas sweat normally, others don't</li>
+                    <li>Inability to cool down properly (heat intolerance)</li>
+                </ul>
+
+                <h4>Gastrointestinal Autonomic Symptoms</h4>
+                <ul>
+                    <li><strong>Gastroparesis</strong> - delayed stomach emptying
+                        <ul>
+                            <li>Early satiety (feeling full after small amounts)</li>
+                            <li>Nausea, especially after meals</li>
+                            <li>Bloating</li>
+                        </ul>
+                    </li>
+                    <li>Constipation or diarrhea (or alternating)</li>
+                    <li>Abdominal cramping</li>
+                    <li>Poor appetite</li>
+                </ul>
+
+                <h4>Urogenital Autonomic Symptoms</h4>
+                <ul>
+                    <li>Bladder urgency or frequency</li>
+                    <li>Nocturia (nighttime urination)</li>
+                    <li>Incomplete bladder emptying</li>
+                    <li>Urinary retention</li>
+                    <li>Sexual dysfunction (erectile dysfunction, decreased sensation, difficulty with arousal or orgasm)</li>
+                </ul>
+
+                <h4>Other Autonomic Symptoms</h4>
+                <ul>
+                    <li><strong>Profound fatigue</strong> (some people can barely get out of bed)</li>
+                    <li><strong>Stress Intolerance</strong> (symptom trigger as well as lower overwhelm threshold)</li>
+                    <li><strong>Dry eyes and mouth</strong> (sicca symptoms)</li>
+                    <li><strong>Twitching muscles</strong></li>
+                    <li>Abnormal flushing or skin discoloration</li>
+                    <li>Temperature regulation problems</li>
+                    <li>Exercise intolerance</li>
+                    <li>Difficulty regulating blood pressure</li>
+                </ul>
+
+                <h3>Insomnia</h3>
+                <p>Common in SFN and can potentially be <strong>extremely</strong> debilitating on its own</p>
+
+                <h3>Post-Exertional Malaise (PEM)</h3>
+
+                <p>Post-Exertional Malaise is a delayed flare of symptoms that can occur not only after physical or mental exertion, but also following stressful situations or emotionally intense events. Unlike normal tiredness, PEM can involve worsening nerve pain, burning, tingling, fatigue, brain fog, or autonomic symptoms that can last hours to days. It's similar to what's seen in chronic fatigue syndrome/myalgic encephalomyelitis (ME/CFS), and likely happens because small fibers are already stressed or damaged, so any additional metabolic, inflammatory, or emotional load can temporarily overwhelm the system.</p>
+
+                <p>PEM can be triggered even by mild activity such as a short walk, light housework, cognitive tasks, or a stressful event. Its severity and duration are unpredictable. This doesn't mean activity or stress should be avoided entirely, but it highlights the importance of pacing, careful monitoring, and graded activity. Many people find it helpful to track triggers and symptom patterns in a journal, and to work with therapists familiar with neuropathic or dysautonomia conditions. Recognizing PEM is crucial: pushing through flares can worsen symptoms over time, while pacing and mindful recovery allow patients to maintain function without repeated setbacks.</p>
+
+                <div class="alert-box">
+                    <h4>Important Note About Symptoms</h4>
+                    <p><strong>SFN symptoms are maddeningly variable.</strong> You won't experience everything listed here, severity differs dramatically between people, and your symptoms will likely fluctuate day-to-day or even hour-to-hour. Having stretches of better days mixed with terrible days is completely normal and doesn't mean your condition is necessarily improving or worsening. It's just how SFN behaves. This unpredictability is one of the hardest parts to deal with, but knowing it's typical can at least help you stop second-guessing yourself.</p>
+                </div>
+            </section>
+
+            <!-- OVERLAPPING CONDITIONS PAGE -->
+            <section id="overlapping" class="page-section">
+                <h2>Overlapping Conditions</h2>
+
+                <h3>Fibromyalgia</h3>
+
+                <p>Research using objective tests like skin biopsies and corneal confocal microscopy has found that <strong>around 40-50% of people diagnosed with fibromyalgia actually show evidence of SFN.</strong> That means nearly half of those labeled with "fibro" may have an identifiable nerve fiber loss contributing to their pain, burning, and sensory issues. Given that level of overlap, anyone diagnosed with or strongly suspecting fibromyalgia should be tested for SFN, especially if they experience burning pain, tingling, numbness, or temperature sensitivity. The fact that this isn't standard practice yet highlights how underrecognized SFN is.</p>
+
+                <h3>Autism</h3>
+
+                <p>Both small fiber neuropathy and autism appear to involve, at least in part, abnormalities in how neurons develop, connect, or function though in very different systems of the body. Several studies have identified reduced intraepidermal nerve fiber density (the key diagnostic feature of SFN) and signs of autonomic dysregulation among autistic individuals. <strong>For example, a 2020 skin-biopsy study reported that around 53% of autistic participants showed small-fiber loss compared to neurotypical controls.</strong></p>
+
+                <p>Considering the overlap in symptomology (especially sensory and autonomic issues), if you have been diagnosed with or suspect you may have SFN, autism may be worth investigating for you (or vice versa) to help general symptom and life difficulty management. Similarly to SFN, many are undereducated about autism and misunderstand what it fully entails. The RAADS-R test is a great starting point and can be taken easily and for free at <a href="https://embrace-autism.com/raads-r/#test" target="_blank">https://embrace-autism.com/raads-r/#test</a>.</p>
+
+                <h3>Other Common Overlaps</h3>
+
+                <p>Beyond fibromyalgia and autism, small fiber neuropathy (SFN) often overlaps with or develops secondary to several other conditions. Diabetes and even prediabetes are the most common causes worldwide, since mild glucose dysregulation can quietly damage small nerve fibers over time. Autoimmune diseases such as Sjögren's syndrome, lupus, sarcoidosis, celiac disease, and Hashimoto's thyroiditis are also frequent culprits, where the immune system's chronic activation inflames or attacks small fibers directly.</p>
+
+                <p><strong>Post-viral syndromes, including long COVID, have recently drawn attention to SFN as more people experience burning pain, tingling, and autonomic issues after infections.</strong> Mast cell activation syndrome (MCAS) and Ehlers-Danlos syndrome (EDS) are increasingly recognized in the same population, likely due to shared immune or connective-tissue abnormalities that make nerve fibers more sensitive and reactive. Dysautonomia and POTS (postural orthostatic tachycardia syndrome) also commonly coexist with SFN, especially in younger women, leading to overlapping symptoms like dizziness, heart rate spikes, and temperature intolerance.</p>
+            </section>
+
+            <!-- DIAGNOSIS PAGE -->
+            <section id="diagnosis" class="page-section">
+                <h2>Getting Diagnosed</h2>
+
+                <h3>Why Diagnosis Is So Difficult</h3>
+
+                <p>Getting an SFN diagnosis typically takes <strong>months to years</strong>. Here's why:</p>
+
+                <ol>
+                    <li><strong>Lack of medical awareness</strong> - Many doctors haven't heard of SFN or don't recognize it</li>
+                    <li><strong>Normal standard tests</strong> - EMG/NCS being normal leads to dismissal</li>
+                    <li><strong>Symptom overlap</strong> - Mimics fibromyalgia, MS, anxiety, vitamin deficiencies</li>
+                    <li><strong>Limited access to specialized testing</strong> - Skin biopsies and QSART aren't available everywhere</li>
+                    <li><strong>Vague symptom descriptions</strong> - "Burning feet" and "dizziness" are nonspecific</li>
+                </ol>
+
+                <h3>Navigating Medical Care</h3>
+
+                <p>Depending on where you live, you will likely end up knowing more than the slew of doctors you may have to go through to finally get to one who is more familiar with SFN. <strong>You may have to get used to the idea of being an advocate for yourself, being assertive, proactive, and forward. Be prepared, calm, respectful, and bring resources. If possible, keep organized notes of your symptoms, the doctors you have seen, and the treatments they've already tried.</strong></p>
+
+                <div class="alert-box">
+                    <strong>If you run into an inappropriately unsupportive, unhelpful or generally crappy doctor -- you can always try a different one. This is your right as a patient.</strong>
+                </div>
+
+                <h3>The Diagnostic Journey: Step by Step</h3>
+
+                <div class="info-box">
+                    <strong>The Skin Biopsy for Intraepidermal Nerve Fiber Density (IENFD) is the current gold standard test for verifying SFN. Your chosen neurologist needs to be capable and willing to administer this test.</strong> Before you can get the biopsy, other standard preliminary testing will need to be done to rule out other things.
+                </div>
+
+                <h4>Step 1: Clinical Evaluation</h4>
+                <p>A competent and informed neurologist will need to go over your medical history with you, and will do a variety of non-invasive routine physical tests.</p>
+
+                <h4>Step 2: Rule Out Large Fiber Neuropathy</h4>
+
+                <p><strong>EMG/NCS (Electromyography and Nerve Conduction Studies):</strong></p>
+                <ul>
+                    <li><strong>Purpose:</strong> Test large myelinated nerve fibers</li>
+                    <li><strong>In "pure" SFN:</strong> These will be <strong>NORMAL</strong></li>
+                    <li><strong>If abnormal:</strong> You may have:
+                        <ul>
+                            <li>Mixed neuropathy (both large and small fibers)</li>
+                            <li>Large fiber neuropathy</li>
+                            <li>Radiculopathy or other nerve compression</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>Important:</strong> A normal EMG/NCS does NOT mean nothing is wrong. It points toward small fiber involvement
+                </div>
+
+                <h4>Step 3: Confirm Small Fiber Damage</h4>
+
+                <p>Multiple specialized tests are available. Combining tests increases diagnostic accuracy.</p>
+
+                <h4>Skin Biopsy for Intraepidermal Nerve Fiber Density (IENFD)</h4>
+                <p><strong>The current "Gold standard" structural test</strong></p>
+
+                <p><strong>The skin biopsy uses a small 3mm punch tool---about the size of a pencil eraser---to take a tiny sample of skin.</strong> Your doctor will typically take one from your lower leg (about 10cm above your ankle) and often a second one from your thigh to compare nerve fiber density at different locations. The area is numbed first with a local anesthetic injection, and that injection itself is actually the most uncomfortable part of the whole procedure. Once you're numb, you won't feel the actual biopsy.</p>
+
+                <p>The tissue sample is then sent to a specialized lab where it's stained with something called PGP 9.5 antibody, which makes the nerve fibers visible under a microscope. Lab technicians count how many nerve fibers are present per millimeter of skin and compare your results to normal values for your age and gender. If your nerve fiber density is reduced, that confirms SFN. The biopsy catches about 65-90% of cases with very few false positives, making it quite reliable. You'll have a small scar where the biopsy was taken, and results typically come back in 2-4 weeks. The main challenge is that not all hospitals have labs that can process these biopsies properly, so your sample may need to be sent out. Insurance coverage varies, so check with your provider beforehand.</p>
+
+                <h4>Other Possible Helpful Diagnostic Tests</h4>
+                <ol>
+                    <li>Quantitative Sensory Testing (QST)</li>
+                    <li>Quantitative Sudomotor Axon Reflex Test (QSART)</li>
+                    <li>Electrochemical Skin Conductance (ESC)</li>
+                    <li>Laser Evoked Potentials (LEP)</li>
+                </ol>
+
+                <p>Your neurologist may or may not want a combination of these tests done.</p>
+
+                <h3>Finding the Cause</h3>
+
+                <p>Once a patient is diagnosed, the next order of business is to attempt to figure out the cause. <strong>In 30-50% of cases, no clear cause is found even after extensive testing. This is called "Idiopathic" Small Fiber Neuropathy, meaning the cause is unknown.</strong></p>
+
+                <h4>Essential Blood Tests</h4>
+                <p>A competent and informed neurologist should know to order a gamut of tests especially including the ones listed below after your diagnosis:</p>
+
+                <ul>
+                    <li><strong>Glucose tests</strong> (fasting, HbA1c, glucose tolerance test)</li>
+                    <li><strong>Vitamin B12, B1, folate</strong> (and methylmalonic acid for accurate B12)</li>
+                    <li><strong>Vitamin B6</strong> (check for toxicity, not just deficiency)</li>
+                    <li><strong>Thyroid</strong> (TSH, free T4)</li>
+                    <li><strong>Autoimmune</strong> (ANA, SSA/SSB, celiac panel)</li>
+                    <li><strong>Infections</strong> (HIV, Hepatitis C, Lyme if indicated)</li>
+                </ul>
+
+                <h4>If Autoimmune Suspected:</h4>
+                <ul>
+                    <li>Sjögren's antibodies, sarcoidosis screening</li>
+                    <li>Specialized panels (FGFR3, TS-HDS antibodies)</li>
+                </ul>
+
+                <h4>If No Cause Found:</h4>
+                <ul>
+                    <li>Consider genetic testing (SCN9A, SCN10A genes)</li>
+                    <li>Especially if: young age, severe pain, family history, non-length-dependent pattern</li>
+                </ul>
+            </section>
+
+            <!-- CAUSES PAGE -->
+            <section id="causes" class="page-section">
+                <h2>Causes and Risk Factors</h2>
+
+                <h3>"Idiopathic" SFN</h3>
+
+                <p><strong>As mentioned before, in 30-50% of cases, no clear cause is found even after extensive testing.</strong> But that doesn't mean your symptoms aren't real, that it's all in your head, or that nothing can be done. It simply means that science hasn't yet identified your particular cause. Treatment, in these situations, focuses on managing and reducing symptoms while research continues to uncover new potential causes.</p>
+
+                <h3>Why Finding the Cause Matters</h3>
+
+                <p><strong>Treating the underlying condition can:</strong></p>
+                <ul>
+                    <li>Halt or slow progression</li>
+                    <li>Sometimes reverse nerve damage</li>
+                    <li>Prevent other serious complications</li>
+                </ul>
+
+                <h3>Common Causes (Most to Least)</h3>
+
+                <h4>1. Metabolic/Endocrine (Most Common)</h4>
+
+                <p><strong>Diabetes and Prediabetes</strong> - #1 cause</p>
+                <ul>
+                    <li>Even "borderline" blood sugar damages nerves</li>
+                    <li><strong>Key:</strong> Get glucose tolerance test, not just fasting glucose</li>
+                    <li>Strict control can improve nerve density</li>
+                    <li>Lifestyle changes (diet + exercise) are highly effective</li>
+                </ul>
+
+                <p><strong>Vitamin B12 Deficiency</strong></p>
+                <ul>
+                    <li>Causes identical symptoms to SFN</li>
+                    <li>"Normal" levels may not be enough for you</li>
+                    <li>Get methylmalonic acid test (more accurate)</li>
+                    <li>Treatment: 1000mcg+ daily or injections</li>
+                </ul>
+
+                <p><strong>Thyroid Problems</strong></p>
+                <ul>
+                    <li>Both hypo- and hyperthyroidism</li>
+                </ul>
+
+                <p><strong>Metabolic Syndrome</strong></p>
+                <ul>
+                    <li>Obesity, insulin resistance, high blood pressure</li>
+                </ul>
+
+                <h4>2. Autoimmune/Inflammatory</h4>
+
+                <p><strong>Sjögren's Syndrome</strong> - dry eyes/mouth + SFN</p>
+                <ul>
+                    <li>May respond to IVIG</li>
+                    <li>SFN can appear before other symptoms</li>
+                </ul>
+
+                <p><strong>Celiac Disease</strong></p>
+                <ul>
+                    <li>Can occur without GI symptoms</li>
+                    <li>Strict gluten-free diet may improve neuropathy</li>
+                </ul>
+
+                <p><strong>Sarcoidosis</strong></p>
+                <ul>
+                    <li>May respond to IVIG</li>
+                </ul>
+
+                <p><strong>Others:</strong> Lupus, rheumatoid arthritis, vasculitis</p>
+
+                <h4>3. Infections</h4>
+                <ul>
+                    <li>HIV</li>
+                    <li>Hepatitis C (causes cryoglobulinemia → SFN)</li>
+                    <li>Lyme disease</li>
+                    <li><strong>Long COVID</strong> (increasingly recognized)</li>
+                </ul>
+
+                <h4>4. Genetic</h4>
+
+                <p><strong>Sodium channel mutations</strong> (SCN9A, SCN10A, SCN11A)</p>
+                <ul>
+                    <li>Causes 30-35% of genetic SFN</li>
+                    <li>Gain-of-function mutations = hyperexcitable pain nerves</li>
+                    <li>Consider testing if young, severe pain, family history</li>
+                    <li>Important for future targeted treatments</li>
+                </ul>
+
+                <p><strong>Other genetic conditions:</strong></p>
+                <ul>
+                    <li>Fabry disease, hereditary amyloidosis, Ehlers-Danlos syndrome</li>
+                </ul>
+
+                <h4>5. Toxic</h4>
+                <ul>
+                    <li><strong>Alcohol</strong> (even moderate use, some people are unknowingly very sensitive)</li>
+                    <li><strong>Excess vitamin B6</strong> (yes, too much causes neuropathy!)</li>
+                    <li>Chemotherapy drugs</li>
+                    <li>Certain antibiotics (metronidazole, linezolid)</li>
+                    <li>Heavy metals</li>
+                </ul>
+            </section>
+
+            <!-- TREATMENT PAGE -->
+            <section id="treatment" class="page-section">
+                <h2>Treatment</h2>
+
+                <div class="info-box">
+                    <p><strong>In many cases there isn't a "cure", but that doesn't mean there's no hope.</strong></p>
+                    <p>Treatment can often slow or even stop the progression of the condition if the underlying cause is identified and addressed. Even when the cause remains unknown, treatment can still make a big difference by significantly reducing pain and improving overall quality of life.</p>
+                </div>
+
+                <p><strong>In many cases, (especially of idiopathic SFN) people find more relief from symptoms through lifestyle modifications (diet, exercise, stress management) and experimenting with supplements than they do from the often currently prescribed medications.</strong></p>
+
+                <p><strong>Every individual presentation of SFN is unique and will respond differently to different things.</strong> You are very likely going to have to do a lot of experimenting to see what helps you the most personally. Some specific and unique combination of diet and lifestyle changes, medications and supplements is what will most likely help you find your specific flow for your specific case.</p>
+
+                <h3>A Word on IVIG</h3>
+
+                <p><strong>Intravenous Immunoglobulin (IVIG)</strong> is a high-cost immunotherapy that can be highly effective for specific autoimmune-related SFN cases, but its use must be very selective based on definitive diagnostic evidence.</p>
+
+                <h4>When IVIG Works:</h4>
+                <ul>
+                    <li>IVIG has demonstrated persistent improvement in SFN specifically associated with confirmed Sjögren syndrome and Sarcoidosis</li>
+                    <li>May be considered for other confirmed autoimmune causes where standard immunosuppression has failed</li>
+                </ul>
+
+                <h4>When IVIG Does NOT Work:</h4>
+                <ul>
+                    <li>A randomized, double-blind, placebo-controlled trial showed IVIG had no significant effect on pain in patients with idiopathic painful SFN</li>
+                </ul>
+
+                <div class="warning-box">
+                    <strong>Critical Guidance:</strong> IVIG should only be pursued when SFN is definitively linked to specific, responsive autoimmune conditions. It should NOT be prescribed for idiopathic cases due to lack of demonstrated efficacy, significant costs (often $10,000+ per infusion), and potential risks including headaches, flu-like symptoms, blood clots, and allergic reactions.
+                    <p>If your neurologist suggests IVIG for idiopathic SFN, it's reasonable to ask for the specific evidence supporting this decision or seek a second opinion.</p>
+                </div>
+
+                <h3>Medications</h3>
+
+                <p>The medications doctors typically prescribe for SFN (antidepressants and gabapentinoids) were mostly studied in diabetic neuropathy and general peripheral neuropathy---not SFN specifically. And even in those studies, the results were pretty disappointing.</p>
+
+                <h4>The Reality from Research:</h4>
+                <ul>
+                    <li>Only about 23-25% of people get significant (≥50%) pain relief from duloxetine or nortriptyline</li>
+                    <li>Dropout rates are high (37-38%) because of side effects</li>
+                    <li>These numbers come from studies on diabetic neuropathy, not pure SFN</li>
+                    <li>Many people in the SFN community report these medications don't help them much</li>
+                </ul>
+
+                <p>Does this mean don't try them? No. Some people do get relief, and you might be one of them. But go in with realistic expectations: you're looking for partial improvement (30-50% reduction), not a cure. And if they don't work for you, it's not because you're doing something wrong---it's because they just don't work well for most people with SFN.</p>
+
+                <h4>Antidepressants (Yes, for Pain)</h4>
+
+                <p>Why antidepressants for pain? They work on pain pathways in your nervous system, completely separate from their mood effects. You don't need to be depressed for them to potentially help your pain. The problem is they often don't help as much as doctors hope.</p>
+
+                <p><strong>Duloxetine (Cymbalta)</strong><br>
+                Often tried first; can help some people but many don't notice much. Starts low and is increased (typical 30 → 60 mg), and it must be tapered off to avoid withdrawal --- nausea, fatigue, dizziness are common.</p>
+
+                <p><strong>Venlafaxine (Effexor)</strong><br>
+                An SNRI similar to duloxetine and used as an alternative. Effects and side effects are largely the same; some people find it less sedating.</p>
+
+                <p><strong>Nortriptyline</strong><br>
+                A TCA that helps a minority, and it can improve sleep as well as pain for those people. Side effects (dry mouth, drowsiness, weight gain) are common and it can affect heart rhythm, so it's not safe for everyone.</p>
+
+                <p><strong>Amitriptyline</strong><br>
+                Older, more sedating TCA --- useful if insomnia is the bigger problem but often causes daytime grogginess. Side effects mirror nortriptyline and many people can't tolerate the sedative effects.</p>
+
+                <h4>Anticonvulsants (Gabapentinoids)</h4>
+
+                <p>These were also mainly studied in diabetic neuropathy, not SFN specifically. Results are mixed.</p>
+
+                <p><strong>Gabapentin (Neurontin)</strong><br>
+                Cheaper gabapentinoid that helps some but needs multiple daily doses and has variable absorption. Side effects are similar to pregabalin but often milder for people who tolerate it. They will usually try you on this first.</p>
+
+                <p><strong>Pregabalin (Lyrica)</strong><br>
+                A stronger gabapentinoid that works for some and tends to act faster than antidepressants. Downsides: dizziness, drowsiness, swelling, weight gain; it's often pricier and is a controlled drug. Many find the side effects unbearable, especially as they go up in dose.</p>
+
+                <div class="warning-box">
+                    <strong>Reality check on gabapentinoids:</strong> Despite being prescribed constantly, the evidence for their effectiveness is weak even in the studies that exist. Many people report they don't help much or the side effects aren't worth it. <strong>They (especially lyrica) can be extremely addictive with very unpleasant withdrawals.</strong> They may have more utility used as sparsely as possible -- such as for doing errands or going to appointments a couple times a week if you have issues leaving the house due to pain. Tolerance develops very quickly, even after 3 consecutive days of use.
+                </div>
+
+                <p>After putting you through the ringer with all these medications and you failing them -- only then might they want to try you on more powerful medications such as opioids. These, however, are extremely addictive and come with many side effects. They may end up making your life significantly worse in the long run. <strong>These types of things should only be considered after you have 100% tried everything else -- especially drastic changes to diet and lifestyle.</strong></p>
+
+                <h4>Other Medications</h4>
+
+                <p><strong>Propranolol</strong><br>
+                This is a beta-blocker that is especially helpful if you have a lot of issue with your heart beating too fast. <strong>Chest tightness and heart palpitations are common complaints</strong> related to SFN induced dysautonomia-related tachycardia. Propranolol is currently prescribed by some neurologists specifically for this, and anecdotally users have reported significant relief from it.</p>
+
+                <p><strong>Pyridostigmine</strong><br>
+                This is for the gastroparesis, food not moving very well. It may provide significant relief in the beginning, but beware because later on down the line it may stop working nearly as well. This medication and others in its class (possibly itopride) need to be studied more for SFN digestive issues. If gastroparesis is a significant issue for you, it may be worth tentatively talking to your neurologist about -- provided they are capable and willing of looking into it for you.</p>
+
+                <h3>Supplements</h3>
+
+                <p><strong>Low-dose naltrexone (LDN):</strong> LDN is technically a <strong>medication</strong>, not a supplement -- however, many people have trouble getting it covered by their insurance and have to go through other (legal) channels to obtain it. LDN is a tiny-dose opioid blocker that paradoxically seems to calm down neuroinflammation and certain pain circuits --- people with fibromyalgia and some neuropathic pain conditions have reported meaningful pain and quality-of-life gains, and there are emerging small cohorts and studies specifically looking at biopsy-confirmed SFN showing promise. It's not mainstream yet, but many patients find it worth trying when other options fail; side effects are usually mild at low doses.</p>
+
+                <p>Results can be a mixed bag. Sometimes LDN may take a while to work, sometimes it never works... and sometimes it may work for a while and then stop working. However, anecdotal reports in the past of people with SFN have sworn by LDN as being their main pain treatment.</p>
+
+                <p>If you're having issues getting it prescribed or covered by insurance, there are some relatively affordable online services that can help.</p>
+
+                <p><strong>R-lipoic acid (R-ALA):</strong> Think of R-ALA as a powerful antioxidant your nerves can use when they're under attack --- it helps mop up free radicals, supports mitochondria, and can help nerves get back some function after oxidative stress. People with diabetic and other neuropathies often report less burning and tingling after weeks of R-ALA; the strongest evidence comes from diabetic neuropathy trials and reviews rather than big SFN-specific studies, so it's reasonable to try as a nerve-protective adjunct but don't expect a miracle overnight.</p>
+
+                <p>Some people also report reduction in symptoms with normal ALA.</p>
+
+                <p><strong>PEA (palmitoylethanolamide):</strong> PEA is an "endocannabinoid-like" fat molecule that helps calm neuroinflammation and stabilizes immune cells (mast cells, microglia) around nerves --- so instead of numbing pain it tries to cool the inflammatory fire that's irritating small fibers. Multiple randomized trials and recent meta-analyses show PEA can reduce neuropathic pain with good tolerability, though large, SFN-specific trials are still sparse; many people with SFN try micronized PEA for weeks to see if burning and shooting pains ease.</p>
+
+                <p><strong>Liposomal glutathione:</strong> glutathione is the body's master antioxidant, and because oxidative stress can damage small nerve fibers, restoring glutathione is a logical approach --- liposomal forms aim to actually get glutathione into the bloodstream/cells better than plain powder. Human studies show oral (including liposomal) glutathione can raise body stores and reduce oxidative markers, and glutathione has been tested for preventing or easing chemo-related and other peripheral neuropathies; direct, high-quality trials in SFN are limited, but it's a low-risk option people try when oxidative stress seems part of the problem.</p>
+
+                <p><strong>Agmatine sulfate:</strong> Agmatine is a naturally occurring breakdown product of arginine that tweaks pain signaling (NMDA/NO pathways and others) rather than just "numbing" you. Some small open and pilot studies, including a case series in people with treatment-resistant painful SFN, showed substantial drops in pain for many patients, so it's one of the more promising supplements if you've already tried first-line meds without success. Evidence is early and mainly small studies, so treat it as experimental-but-interesting: some people get real relief, others don't, and long-term safety data are limited. If you try it, keep a symptom log.</p>
+
+                <p><strong>Benfotiamine:</strong> This is a fat-soluble form of vitamin B1 that helps certain metabolic pathways and can reduce the harmful byproducts (like advanced glycation end-products) that damage nerves in settings like diabetes. In plain terms, it helps fix the biochemical mess that can fry small fibers. Trials in diabetic neuropathy give a mixed but generally positive picture: some people notice symptom improvement fairly quickly, others see little change; it's usually well tolerated and often used alongside other therapies as a low-risk adjunct. Again, SFN-specific high-quality trials are sparse, so think of benfotiamine as a plausible, low-harm addition rather than a proven cure.</p>
+
+                <h4>B Vitamins</h4>
+
+                <div class="warning-box">
+                    <h4>Vitamin B6 - CAUTION!</h4>
+                    <p>Vitamin B6 is important for nerve health, but it's a double-edged sword. The body needs a little (the active form is pyridoxal-5-phosphate, P5P), yet <strong>too much (especially the older supplement form pyridoxine) can <em>cause</em> sensory neuropathy.</strong> <strong>Absolutely prefer P5P</strong> when a clinician recommends B6 because it's the bioactive form your body uses, but keep total supplemental B6 very low: follow conservative guidance and keep total B6 (from all supplements) at or below ~12 mg/day --- and preferably ≤10 mg/day to minimize risk. Evidence shows neuropathy risk rises with higher chronic intakes (case reports even below formerly cited high doses), regulators now flag doses >10 mg for warnings, and EFSA set a 12 mg/day tolerable upper level for adults. If you start any B6 product, track new/worse tingling and stop it and see your clinician if symptoms appear.</p>
+                </div>
+
+                <p><strong>B Complex</strong><br>
+                A good B-complex vitamin can act as foundational nerve support for people with small fiber neuropathy, since the B-family works together to fuel energy production, repair nerve tissue, and keep the nervous system balanced. Deficiencies in B1 (thiamine), B12 (methylcobalamin), or folate can directly contribute to neuropathy symptoms, and even marginal shortages can worsen pain or slow healing. Taking a balanced B-complex (rather than isolated high doses) helps avoid the problem of overloading one vitamin - especially B6, which in excess can actually cause nerve damage. Look for a formula that uses the <em>active or methylated</em> forms (like methylcobalamin for B12, benfotiamine for B1, and P5P for B6) and keeps total B6 below about 10-12 mg per day. Used wisely, a B-complex can fill nutritional gaps, support nerve metabolism, and complement other treatments aimed at reducing inflammation and repairing small-fiber damage.</p>
+
+                <p><strong>Vitamin B12</strong></p>
+                <ul>
+                    <li>Deficiency causes neuropathy identical to SFN</li>
+                    <li>Get methylmalonic acid test (more accurate than B12 alone)</li>
+                    <li>Dose: 1000mcg+ daily (sublingual or injections)</li>
+                    <li>Takes months to improve</li>
+                </ul>
+
+                <h4>CoQ10 and Ubiquinol</h4>
+
+                <p>Coenzyme Q10 (CoQ10), particularly in its reduced form, ubiquinol, plays a pivotal role in mitochondrial energy production and acts as a potent antioxidant. Fatigue is a prevalent and often debilitating symptom in small fiber neuropathy (SFN), potentially stemming from mitochondrial dysfunction and oxidative stress. Supplementation with CoQ10 or ubiquinol has been studied for its potential to alleviate fatigue in various conditions associated with mitochondrial impairment.</p>
+
+                <p>Some users have reported major improvements from CoQ10 combined with ALA specifically, while others have reported improvements from other supplements that work on mitochondria such as Methylene Blue.</p>
+
+                <h4>Other Helpful Supplements</h4>
+
+                <p><strong>Vitamin D</strong><br>
+                Low vitamin D shows up a lot in people with chronic pain and neuropathic complaints, and treating a deficiency sometimes improves pain or overall nerve health. It's an easy, low-risk check (blood test) and replacement if deficient is a sensible, evidence-based first step for many people with SFN.</p>
+
+                <p><strong>Magnesium</strong></p>
+                <ul>
+                    <li>Helps muscle cramps, restless legs</li>
+                    <li>Best forms: Glycinate, Threonate</li>
+                </ul>
+
+                <p><strong>Omega-3 fatty acids and curcumin (turmeric):</strong><br>
+                Both are anti-inflammatory, widely used, and supported by animal models and some human data for reducing nerve damage and aiding recovery; evidence quality varies, but they're generally low-risk and can be part of a broader anti-inflammatory strategy. Curcumin has some promising trials in neuropathic settings and omega-3s show signals for nerve protection in a few clinical reviews.</p>
+
+                <p>Curcumin is much more effective and absorbed when combined with Bioperine. Other Turmeric formulas, such as Turmeric Phystosome with Meriva, anecdotally can provide better pain relief than just turmeric powder on its own.</p>
+            </section>
+
+            <!-- LIFESTYLE PAGE -->
+            <section id="lifestyle" class="page-section">
+                <h2>Lifestyle Management</h2>
+
+                <h3>Diet</h3>
+
+                <p>People with SFN are especially vulnerable to unhealthy foods but may be stuck in a cycle of continuously eating it and triggering themselves and their symptoms while remaining unaware of what they are causing to happen.</p>
+
+                <p>A diet centered around <strong>whole, unprocessed foods</strong> helps keep blood sugar stable and inflammation low. Whole foods provide the vitamins, antioxidants, and healthy fats that nerves need to repair and protect themselves. Vegetables, fruits, whole grains, legumes, nuts, and seeds supply fiber and phytonutrients that support circulation and reduce oxidative stress.</p>
+
+                <h4>Reducing Types of Sugar</h4>
+
+                <p>Many Redditors have reported that reducing sugar intake can significantly improve their symptoms. This is often attributed to extra sensitivity to the inflammatory effects from sugar. The higher the glycemic index of a sweetener is may influence its potential to increase inflammation.</p>
+
+                <p>Repeated blood sugar spikes lead to oxidative stress and low-grade inflammation, largely through a process called glycation, where excess sugar binds to proteins and fats in the body, forming advanced glycation end products (AGEs). These AGEs directly damage tissues, including small nerve fibers, and activate inflammatory pathways.</p>
+
+                <p>Stevia, Monkfruit and Allulose are all considered safe and low GI sweeteners. See which appeals to you the most!</p>
+
+                <h4>Gluten and Dairy</h4>
+
+                <p>Some individuals have found that avoiding gluten and dairy can help reduce inflammation and nerve pain. It's always worth experimenting with taking a break for days or weeks at a time to see the difference.</p>
+
+                <h4>Cheap, Bad Oils</h4>
+
+                <p>Cheap oils used in many processed foods (like sunflower, soybean, and corn oil) are high in omega 6 and omega 9 fatty acids, which compete with omega 3s in the body for the same enzymes used in fat metabolism. Since omega 3s are crucial for nerve repair and maintaining an anti-inflammatory balance, an excess of omega 6 and 9 can crowd them out, tipping the body toward inflammation. Over time, this imbalance may worsen pain and nerve sensitivity in people with small fiber neuropathy. When choosing oils, it helps to look up their omega 3 to omega 6 or 9 ratio.</p>
+
+                <h4>Alcohol</h4>
+
+                <p>Many people with small fiber neuropathy find that alcohol makes their symptoms worse, sometimes dramatically. Alcohol is directly toxic to peripheral nerves, and chronic use can actually <em>cause</em> or worsen neuropathy on its own ("alcoholic neuropathy"). Even small amounts can trigger flares in burning, tingling, or nerve pain for those already sensitized. Beyond the direct nerve toxicity, alcohol also depletes key nutrients needed for nerve repair (especially B vitamins like B1 and B12) and increases oxidative stress and inflammation, both of which are already problems in SFN. Some people report that even a single drink can make pain or heat sensitivity spike for days, while others tolerate an occasional drink with no major issue; it varies by individual, cause of SFN, and overall health. The safest general advice is to limit or avoid alcohol, especially if you notice symptom flare-ups afterward. Your small nerve fibers are already fighting hard, and alcohol tends to push them in the wrong direction.</p>
+
+                <h3>Exercise</h3>
+
+                <p>Exercise can make a significant difference in your symptoms, but it comes with caveats. On one hand, many people report that movement (especially light aerobic stuff like walking or cycling, plus gentle stretching and strength work) helps with circulation, mood, and even nerve-health over time. For example, research in peripheral neuropathy (mainly in diabetes) found that a 10-week combined aerobic and resistance program reduced pain and improved small-nerve branching in skin biopsies. On the other hand, many folks with SFN say that pushing too hard, too fast leads to <em>flare-ups</em>; more burning, tingling, or fatigue that lasts hours or days.</p>
+
+                <p>What seems to work best: start slow, keep intensity mild to moderate, build gradually, monitor how your body responds, and adjust accordingly. For instance, using low-impact cardio (walking, recumbent bike, swimming), gentle strength/resistance, and balance/stretching workouts helps reduce risk of worsening symptoms. Also integrate recovery days, watch for overheating or prolonged soreness, and pay attention to how your nerves feel afterward.</p>
+
+                <p>In short: exercise can be a powerful tool for SFN but it's not one-size-fits-all. The key is tuning into your body, pacing smartly, and using it as part of a broader strategy.</p>
+
+                <h3>A Word on TENS (Transcutaneous Electrical Nerve Stimulation)</h3>
+
+                <p>TENS units are small, portable devices that deliver mild electrical pulses through electrodes placed on the skin. They're a low-risk, non-invasive option for pain management that many SFN patients find helpful for localized pain relief.</p>
+
+                <p><strong>How it works:</strong> The electrical stimulation may help block pain signals from reaching the brain and stimulate the production of endorphins (the body's natural painkillers).</p>
+
+                <h4>Practical use:</h4>
+                <ul>
+                    <li>Can be used at home as needed</li>
+                    <li>Relatively inexpensive (units range from $30-$300)</li>
+                    <li>No significant side effects for most people</li>
+                    <li>Evidence is mixed but many patients report subjective improvement</li>
+                    <li>Worth trying as part of a multimodal pain management approach</li>
+                </ul>
+
+                <div class="alert-box">
+                    <strong>Note:</strong> TENS should not be used if you have a pacemaker or are pregnant without consulting your doctor first.
+                </div>
+            </section>
+
+            <!-- LIVING WITH SFN PAGE -->
+            <section id="living" class="page-section">
+                <h2>Living with SFN</h2>
+
+                <h3>Disability</h3>
+
+                <p><strong>Even if you have done and are doing everything "correctly", everything possible to help your condition - SFN still has the potential to make living a "normal life" completely impossible.</strong> Carrying grief about this is a normal and rational part of the process of dealing with such a chronic condition. Unfortunately, you still need to be able to afford to live.</p>
+
+                <p>Despite being very debilitated, some people find a way to continue working and supporting themselves. <strong>Not everyone can do this, however.</strong> <strong>If you cannot, or if you are trying but failing -- this is nothing to feel guilty about.</strong> Unfortunately, due to the state of the disability system in the USA and elsewhere, it can be extremely difficult to maintain the same "quality of life" compared to when you could work. <strong>For many, the trade off is a necessity regardless.</strong></p>
+
+                <p>Anecdotally, people have reported successes in getting disability for SFN. Regardless, the process can take a very long time, with many hoops to jump through and possible initial denials.</p>
+
+                <p>The experience of daily living with SFN can make figuring all of this out extremely difficult. Any local resource you can find to help you in the application process is worth reaching out to.</p>
+
+                <div class="info-box">
+                    <strong>A very helpful and kind website to help you through this painful but necessary process that you should definitely check out:</strong>
+                    <p><a href="https://howtogeton.wordpress.com" target="_blank">HowToGetOn.wordpress.com</a></p>
+                </div>
+
+                <h3>Mental Health</h3>
+
+                <p>Managing stress and mental health is not optional when you have a chronic condition like small fiber neuropathy. It is a core part of treatment. Stress, anxiety, and depression crank up the body's alarm systems (think faster heart rate, tighter muscles, more sympathetic nervous system activity, and elevated inflammatory signaling) all of which can amplify nerve pain, make flares worse, and slow recovery. In short, <strong>your mind and nervous system may be an integral part of the illness, not separate from it.</strong></p>
+
+                <p><strong>Depression, anxiety, grief, despair -- these all often come with chronic illness and the subsequent struggles that inevitably creates.</strong> Additionally, any other separate mental health struggles you have inherited from your life are very worthy of your own attention and compassion (in order to reduce the overall current difficulty level of your life!).</p>
+
+                <p>This means practical mental-health care pays off. Regular practices that reduce stress like gentle, consistent movement, <strong>time spent in nature, time spent with loved ones and pets,</strong> paced breathing, short mindfulness or body-scan sessions, decent sleep hygiene, and time-limited cognitive tools to interrupt catastrophic thinking - can lower the volume on pain and help you function better day to day. Therapies like cognitive behavioral therapy or acceptance and commitment therapy are proven to help people living with chronic pain manage symptoms, reduce avoidance, and restore meaningful activity.</p>
+
+                <div class="alert-box">
+                    <strong>Know when to surrender and retreat.</strong> Sometimes your symptoms will completely overwhelm you. Sometimes you may need to be glued to your bed or couch for days or weeks at time. This is a normal part of chronic illness for many sufferers. <strong>Do not beat yourself up for what you truly cannot control.</strong>
+                </div>
+
+                <p><strong>Don't try to carry it alone.</strong> Work with trusted clinicians when possible: a therapist experienced in chronic illness, a pain psychologist, or a primary care doctor who takes mental health seriously can offer tailored strategies and, if needed, medication to treat depression or anxiety. Keep a simple symptom and mood log so you can show trends rather than rely on memory during appointments; this makes it easier to identify triggers, test strategies, and adjust treatment rationally. If stress or mood swings ever make you think about harming yourself, reach out immediately to your clinician, local emergency services, or crisis hotlines---this is a medical emergency and you deserve urgent help.</p>
+
+                <p>Finally, it's always a good idea to be compassionate and pragmatic with yourself. Managing stress is not about eliminating all negative feelings - it is about building habits and supports that reduce needless suffering and let you conserve energy for what matters. Small, repeatable practices and a few trusted supports often yield more long-term benefit than huge one-off efforts.</p>
+
+                <h3>Relationships</h3>
+
+                <p>Being in relationships while you're dealing with a chronic illness like small fiber neuropathy brings a mix of practical problems and emotional landmines. The unpredictability of flares eats at plans and spontaneity, low energy shifts household roles, and pain or brain fog can make you feel unreliable or "less" than you used to be. Partners, family members, and friends may misunderstand what they can't see and respond with frustration, guilt, or overprotectiveness. All of this can seed loneliness, resentment, and shame on both sides: you for needing help, and them for feeling helpless or burdened.</p>
+
+                <p><strong>Clear, honest and respectful communication is an integral and important part of all the relationships in our life.</strong> Our brains as human beings are wired for connection. Don't burn any bridges that you may wish you could cross in the future!</p>
+
+                <p>Intimacy changes, but it doesn't have to disappear. In romance, physical closeness isn't only sex: holding hands, short cuddles, eye contact, and verbal affection matter a lot. Be honest about when sexual activity is doable and when it isn't, and explore alternatives that feel good and low-effort. If emotional distance grows, couples therapy (ideally with someone familiar with chronic illness) can teach tools for validation, pacing, and shared decision-making.</p>
+            </section>
+
+            <!-- RESOURCES PAGE -->
+            <section id="resources" class="page-section">
+                <h2>Resources</h2>
+
+                <h3>Recommended Books & Audiobooks</h3>
+
+                <h4>How to Live Well with Chronic Pain and Illness by Toni Bernhard</h4>
+
+                <p>This book doesn't waste time. She gives you bite-sized, doable tools. Pacing plans that don't require heroic effort, short mental exercises to stop panic from making pain worse, scripts so you don't fumble when talking to doctors or friends, and ways to protect the bits of life that matter. It's written by someone who's been through it, so it sounds like a friend who knows the territory, not a textbook.</p>
+
+                <p>This book is the practical handbook you wish your doctor handed you. It teaches you how to budget your energy, keep your identity from getting eaten by illness, and build tiny rituals that actually improve day-to-day life. It's not about pretending everything's fine; it's about getting smarter and kinder with your limited resources so you can do the things that make life worth living. If you're exhausted by the chaos and want tools that work on low-energy days, this one is a must-read.</p>
+
+                <h4>Mindfulness Meditation for Pain Relief by Jon Kabat-Zinn</h4>
+
+                <p>The audiobook version of "Mindfulness Meditation for Pain Relief" by Jon Kabat-Zinn is a practical, gentle guide that some people with chronic pain find immediately useful for calming the reactivity and panic that make pain feel worse. The recordings walk you through short, usable practices (body scans, breath awareness, and simple meditations) that teach you to notice pain without getting swept into fear, rumination, or the fight-or-flight response; listeners often report that regular practice reduces the emotional intensity of pain, improves sleep, and gives them tools to get through flares without spiraling. It won't erase neuropathic pain, but as a low-risk, easy-to-repeat companion to medical care it helps a lot of people feel more steady, less consumed by symptoms, and more able to pace and engage with life.</p>
+
+                <h3>Online Communities</h3>
+
+                <p>There is a pretty active group related to small fiber neuropathy on Facebook:</p>
+
+                <p><a href="https://www.facebook.com/share/g/1BnLWeLPdz/" target="_blank">Small Fiber Neuropathy Facebook Group</a></p>
+
+                <p>If you know of any others, please let us know!</p>
+
+                <div class="info-box">
+                    <h4>Contributing to This Wiki</h4>
+                    <p>This is an ongoing community project. If you have suggestions, corrections, or additional resources to share, please contribute on the r/smallfiberneuropathy subreddit!</p>
+                </div>
+            </section>
+            
+        </main>
+    </div>
+
+    <div class="footer">
+        <p>Small Fiber Neuropathy Wiki - Community Resource from r/smallfiberneuropathy</p>
+        <p>This is an ongoing community project. Suggestions welcome!</p>
+    </div>
+
+    <script>
+        // Navigation functionality
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('.page-section');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Remove active class from all links and sections
+                navLinks.forEach(l => l.classList.remove('active'));
+                sections.forEach(s => s.classList.remove('active'));
+                
+                // Add active class to clicked link
+                link.classList.add('active');
+                
+                // Show corresponding section
+                const targetId = link.getAttribute('href').substring(1);
+                document.getElementById(targetId).classList.add('active');
+                
+                // Scroll to top of content
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
